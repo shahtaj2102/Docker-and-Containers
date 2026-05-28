@@ -148,9 +148,9 @@ docker run -d \
 docker run -d \
   -p 8081:8081 \
   -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin \
-  -e ME_CONFIG_MONGODB_ADMINPASSWORD=hero123 \
+  -e ME_CONFIG_MONGODB_ADMINPASSWORD=password \
   -e ME_CONFIG_BASICAUTH_USERNAME=user \
-  -e ME_CONFIG_BASICAUTH_PASSWORD=hero123 \
+  -e ME_CONFIG_BASICAUTH_PASSWORD=pass \
   --net mongo-network \
   --name mongo-express \
   -e ME_CONFIG_MONGODB_SERVER=mongodb \
@@ -166,7 +166,7 @@ The `ME_CONFIG_MONGODB_URL` variable is important. Without it, Mongo Express may
 http://localhost:8081
 ```
 
-Log in using the basic auth credentials set above (`user` / `hero123`).
+Log in using the basic auth credentials set above (`user` / `pass`).
 
 ### 6. Create the Database and Collection
 
