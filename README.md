@@ -201,7 +201,6 @@ Docker Compose also automatically creates a shared network for all services defi
 ### Example Docker Compose File
 
 ```yaml
-version: '3'
 services:
   mongodb:
     image: mongo
