@@ -97,7 +97,7 @@ The Docker server itself contains:
 
 ## Developing with Docker
 
-This section walks through a practical demo using a simple JavaScript and Node.js application connected to a MongoDB database and a Mongo Express UI, all running as Docker containers.
+This section walks through a practical demo using a simple JavaScript and Node.js application connected to a MongoDB database and a Mongo Express UI, all running as Docker containers. Initial and final code is available in this repo.
 
 ### 1. Clone and Run the Application Locally
 
