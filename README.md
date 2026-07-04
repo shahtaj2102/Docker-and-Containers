@@ -48,3 +48,40 @@ Once the app ran inside Compose instead of directly on the host, its Mongo conne
 
 **8. Moved Nexus itself into a container**
 As a last step, migrated Nexus, previously installed directly on a VM with a manual Java install, to run as a Docker container on a fresh droplet, using a named volume for its data. Docker was the only prerequisite this time, no Java setup required.
+
+
+## Skills Demonstrated
+
+Containerization fundamentals (images vs. containers, Docker Engine architecture), writing Dockerfiles with production-conscious choices like small base images and installing dependencies inside the build, container networking through custom bridge networks and service discovery by name, multi-container orchestration with Docker Compose, persistent storage via named volumes, private container registry workflows (tag, push, pull against a self-hosted Nexus Docker registry), firewall and realm configuration to support a registry rather than just an app, and debugging containers with `docker logs`, `docker ps`, and `docker exec`.
+
+## Repo Structure
+
+```
+.
+├── starting-code/app/   # course-provided starter app, pre-containerization
+└── final-code/
+    ├── app/             # the working application
+    ├── Dockerfile
+    ├── docker-compose.yaml
+    └── docker_commands.md
+```
+
+## Key Commands
+
+```bash
+# Build and tag
+docker build -t my-app:1.0 .
+docker tag my-app:1.0 <registry-ip>:8083/my-app:1.0
+
+# Push to private registry
+docker login <registry-ip>:8083
+docker push <registry-ip>:8083/my-app:1.0
+
+# Run the full stack
+docker compose -f docker-compose.yaml up
+docker compose -f docker-compose.yaml down
+
+# Debug
+docker logs <container-name> -f
+docker exec -it <container-name> bash
+```
