@@ -85,3 +85,15 @@ docker compose -f docker-compose.yaml down
 docker logs <container-name> -f
 docker exec -it <container-name> bash
 ```
+
+
+## Notes & Limitations
+
+Replace placeholders like `<droplet-ip>` and `<registry-ip>` with real values when reproducing this. The registry runs over HTTP in this lab, which is why the insecure-registry configuration shows up, a real deployment would put TLS in front of it. Port 8081 is Nexus's UI; 8083 is the separate port I dedicated to the Docker registry so the two don't collide.
+
+## Related Projects
+
+[`web-app-on-digitalocean`](https://github.com/shahtaj2102/web-app-on-digitalocean) covers the droplet and firewall fundamentals this builds on, and [`Nexus_Repository_Manager`](https://github.com/shahtaj2102/Nexus_Repository_Manager) is the registry this project pushes images into.
+
+---
+Shahtaj Singh Gill - [LinkedIn](https://www.linkedin.com/in/shahtaj-aws-sap-toronto/) / [GitHub](https://github.com/shahtaj2102)
