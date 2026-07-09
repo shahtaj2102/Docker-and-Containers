@@ -6,7 +6,7 @@ Took an app from "runs on my machine" to a reproducible, networked, multi-contai
 
 ## Why This Exists
 
-Containerizing an app is the first real step toward CI/CD, you can't build a Jenkins pipeline or deploy to Kubernetes around something that isn't packaged consistently yet. This project was about getting that packaging step right: a proper Dockerfile, a private place to store the image, and a way to run the whole stack (app, database, admin UI) with one command instead of a page of manual steps.
+Containerizing an app is the first real step toward CI/CD. You can't build a Jenkins pipeline or deploy to Kubernetes around something that isn't packaged consistently yet. This project was about getting that packaging step right: a proper Dockerfile, a private place to store the image, and a way to run the whole stack (app, database, admin UI) with one command instead of a page of manual steps.
 
 
 ## Workflow
