@@ -89,7 +89,7 @@ docker exec -it <container-name> bash
 
 ## Notes & Limitations
 
-Replace placeholders like `<droplet-ip>` and `<registry-ip>` with real values when reproducing this. The registry runs over HTTP in this lab, which is why the insecure-registry configuration shows up, a real deployment would put TLS in front of it. Port 8081 is Nexus's UI; 8083 is the separate port I dedicated to the Docker registry so the two don't collide.
+Replace placeholders like `<droplet-ip>` and `<registry-ip>` with real values when reproducing this. The registry runs over HTTP in this lab, which is why the insecure-registry configuration shows up. A real deployment would put TLS in front of it. Port 8081 is Nexus's UI; 8083 is the separate port I dedicated to the Docker registry so the two don't collide.
 
 ## Related Projects
 
